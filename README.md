@@ -1,3 +1,3 @@
 # README
 
-This is a repositara for the my first rails app. Study project.
+This is a repositary for my first rails app. Study project.
