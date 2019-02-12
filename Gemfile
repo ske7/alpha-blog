@@ -51,8 +51,6 @@ group :development do
 end
 
 group :test do
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
