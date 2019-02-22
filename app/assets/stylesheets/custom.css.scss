@@ -72,6 +72,16 @@ $navbar-default-bg: #0a0a99;
   margin-left: 15px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: bold;
+}
+
+.article-actions {
+  border-top: 1px solid rgb(209, 201, 201);
+  padding-top: 5px;
+}
+
+.description {
+  margin-top: 0px;
 }
