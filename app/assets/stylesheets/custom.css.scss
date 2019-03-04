@@ -31,6 +31,16 @@ $navbar-default-bg: #0a0a99;
   color: white;
 }
 
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: transparent;
+  color: #f7d333;
+}
+
+.navbar-default .navbar-nav > li > a:active {
+  background-color: navy;
+  color: #f7d333;
+}
+
 .center {
   text-align: center;
 }
