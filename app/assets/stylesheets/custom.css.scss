@@ -146,3 +146,14 @@ h2 {
 .pagination {
   margin-top: 0;
 }
+
+@media screen and (max-width: 766px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: white;
+  }
+
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #f7d333;
+  }
+}
