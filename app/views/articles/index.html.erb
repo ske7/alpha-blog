@@ -2,6 +2,11 @@
 <div class="center">
   <%= will_paginate %>
 </div>
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2 new-article-block">
+    <%= link_to 'New article', new_article_path, class: "btn btn-primary btn-lg" %>
+  </div>
+</div>
 <%= render 'article', obj: @articles %>
 <div class="center">
   <%= will_paginate %>

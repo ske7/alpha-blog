@@ -44,6 +44,9 @@ $navbar-default-bg: #0a0a99;
 .center {
   text-align: center;
 }
+.new-article-block {
+  margin-bottom: 10px;
+}
 
 .jumbotron {
   background-image: asset-url("cover1.jpg");
@@ -139,12 +142,27 @@ h2 {
   margin-bottom: 20px;
 }
 
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
 .input_checkbox input {
   width: auto !important;
 }
 
 .pagination {
   margin-top: 0;
+}
+
+.flex-center-1 {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.container-fluid-ex {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 766px) {

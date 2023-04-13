@@ -1,43 +1,43 @@
 <%= render 'shared/errors', obj: @user %>
 
 <div class="row">
-  <div class="col-md-12">
-    <%= form_for(@user, :html => { class: 'form-horizontal', role: 'form' }) do |f| %>
+  <div class="col-sm-12 flex-center-1">
+    <%= form_with(model: @user, :html => { class: 'center-block col-sm-8 col-xs-12 well form-horizontal', role: 'form' }) do |f| %>
       <div class="form-group">
-        <div class="control-label col-sm-1">
+        <div class="control-label col-sm-2">
           <%= f.label :username %>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-9">
           <%= f.text_field :username, class: 'form-control', placeholder: 'Enter username', autofocus: true %>
         </div>
       </div>
 
       <div class="form-group">
-        <div class="control-label col-sm-1">
+        <div class="control-label col-sm-2">
           <%= f.label :email %>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-9">
           <%= f.email_field :email, class: 'form-control', placeholder: 'Enter email' %>
         </div>
       </div>
 
       <div class="form-group">
-        <div class="control-label col-sm-1">
+        <div class="control-label col-sm-2">
           <%= f.label :password %>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-9">
           <%= f.password_field :password, class: 'form-control', placeholder: 'Enter password' %>
         </div>
       </div>
 
       <div class="form-group">
-        <div class="col-sm-offset-1 col-sm-7">
+        <div class="col-sm-offset-2 col-sm-9">
           <%= f.submit(@user.new_record? ? 'Sign up' : 'Update account', class: 'btn btn-primary btn-lg') %>
         </div>
       </div>
     <% end %>
-    <div class="col-sm-offset-1 col-sm-7" style="padding-left:0px;">
-      <%= link_to 'Cancel request and return to articles listing', articles_path %>
+    <div class="col-sm-offset-2 col-sm-9" style="padding-left:0px;">
+      <%= link_to 'Return home', root_path %>
     </div>
   </div>
 </div>
