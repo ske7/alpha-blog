@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :require_admin, only: [:destroy]
 
   def index
-    @users = User.paginate(page: params[:page], per_page: 5)
+    @users = User.paginate(page: params[:page], per_page: 5).order(username: :asc)
   end
 
   def new
@@ -39,9 +39,11 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    return if @user.admin?
+
     @user.destroy
     flash[:danger] = 'User and all articles created by user have been deleted'
-    redirect_to users_path
+    redirect_to users_path, status: :see_other
   end
 
   private

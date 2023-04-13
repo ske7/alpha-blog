@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_action :require_admin, except: %i[index show]
 
   def index
-    @categories = Category.paginate(page: params[:page], per_page: 3)
+    @categories = Category.paginate(page: params[:page], per_page: 3).order(name: :asc)
   end
 
   def new
@@ -20,7 +20,7 @@ class CategoriesController < ApplicationController
       flash[:success] = 'Category was created successfully'
       redirect_to categories_path
     else
-      render 'new'
+      render 'new', status: :unprocessable_entity
     end
   end
 
@@ -34,7 +34,7 @@ class CategoriesController < ApplicationController
       flash[:success] = 'Category name was successfully updated'
       redirect_to category_path(@category)
     else
-      render 'edit'
+      render 'edit', status: :unprocessable_entity
     end
   end
 

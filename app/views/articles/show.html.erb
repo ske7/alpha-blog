@@ -28,7 +28,9 @@
   <%= simple_format(@article.description) %>
 
   <% if @article.categories.any? %>
-    <p>Categories: <%= render @article.categories %></p>
+    <div class="categories-container">
+      <p>Categories: <%= render @article.categories %></p>
+    </div>
   <% end %>
 
   <div class="article-actions">
