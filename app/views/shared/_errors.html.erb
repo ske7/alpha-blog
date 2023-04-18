@@ -1,11 +1,11 @@
 <% if obj.errors.any? %>
   <div class="row errors" data-turbo-temporary>
-    <div class="col-sm-6 col-sm-offset-3 col-xs-12">
+    <div class="col-sm-8 col-sm-offset-2 col-xs-12 error-panel-container">
       <div class="panel panel-danger">
         <div class="panel-heading">
           <h2 class="panel-title">
             <%= pluralize(obj.errors.count, 'error') %>
-            prohibited this article from being saved
+            prohibited this <%= obj.class.name.downcase %> from being saved
           </h2>
           <div class="panel-body">
             <ul>

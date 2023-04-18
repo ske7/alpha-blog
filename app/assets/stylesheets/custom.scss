@@ -191,6 +191,23 @@ h2 {
   max-width: 1000px;
 }
 
+.max-form-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.panel-title {
+  text-align: center;
+}
+
+.error-panel-container {
+  padding: 11px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 766px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: white;
