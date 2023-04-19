@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="col-sm-12 flex-center-1">
-    <%= form_for(@category, html: { class: 'center-block col-sm-8 col-xs-12 well form-horizontal', role: 'form' }) do |f| %>
+    <%= form_with(model: @category, html: { class: 'center-block col-sm-8 col-xs-12 well form-horizontal', role: 'form' }) do |f| %>
       <div class="form-group">
         <div class="control-label col-sm-2">
           <%= f.label :name %>
