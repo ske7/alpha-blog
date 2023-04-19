@@ -4,3 +4,9 @@ if User.count.zero?
                password: '12qwas',
                admin: true)
 end
+
+if Category.count.zero?
+  Category.create(name: 'Books')
+  Category.create(name: 'Movie')
+  Category.create(name: 'Sport')
+end
