@@ -1,4 +1,4 @@
-if User.count.zero?
+if User.where(admin: true).count.zero?
   User.create!(username: 'Demi',
                email: 'demilichkangaxx@gmail.com',
                password: '12qwas',
